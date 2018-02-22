@@ -1,0 +1,25 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Bimbo Theme",
+  "eslint.autoFixOnSave": true,
+  "eslint.workingDirectories": ["app/"],
+  "editor.fontSize": 12,
+  "editor.snippetSuggestions": "top",
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [100],
+  "editor.cursorBlinking": "smooth",
+  "editor.formatOnSave": true,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  "java.errors.incompleteClasspath.severity": "ignore",
+  "workbench.startupEditor": "newUntitledFile",
+  "prettier.eslintIntegration": true
+}
