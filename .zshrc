@@ -1,13 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 export ANDROID_HOME=/Users/ianbrune/Library/Android/sdk
 export PATH=$HOME/bin:/usr/local/bin:$ANDROID_HOME/platform-tools:$PATH
+export PATH=~/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export idea=/usr/local/bin/idea
 export ZSH=/Users/ianbrune/.oh-my-zsh
+export REACT_EDITOR=code
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
-eval $(thefuck --alias)
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -86,9 +87,17 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+
+push-new-branch() {
+    branch=$(git rev-parse --abbrev-ref HEAD)
+    git push --set-upstream origin $branch
+}
+
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
+alias ll="ls -l"
 
 alias diff='git diff | gitx'
 alias merge-master='git fetch; git merge origin/master'
 alias work='cd ~/Workspace'
+alias pn='push-new-branch'
