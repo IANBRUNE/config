@@ -57,7 +57,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws git-extras npm yarn)
+plugins=(git aws git-extras)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,15 +89,27 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 
 push-new-branch() {
+    git checkout -b $1
     branch=$(git rev-parse --abbrev-ref HEAD)
     git push --set-upstream origin $branch
+}
+
+merge-from-master() {
+    branch=$(git rev-parse --abbrev-ref HEAD)
+    git checkout master
+    git pull
+    git checkout $branch
+    git merge origin/master
 }
 
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
 alias ll="ls -l"
 
+alias delete-merged='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+
 alias diff='git diff | gitx'
-alias merge-master='git fetch; git merge origin/master'
+alias mm='merge-from-master'
 alias work='cd ~/Workspace'
 alias pn='push-new-branch'
+alias sourcez='source ~/.zshrc'
