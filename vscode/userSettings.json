@@ -1,11 +1,10 @@
 {
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Bimbo Theme",
+  "workbench.colorTheme": "Gatito Theme",
   "eslint.autoFixOnSave": true,
   "eslint.workingDirectories": ["app/"],
-  "editor.fontSize": 12,
+  "editor.fontSize": 13,
   "editor.snippetSuggestions": "top",
-  "editor.renderWhitespace": "boundary",
+  "editor.renderWhitespace": "none",
   "editor.rulers": [100],
   "editor.cursorBlinking": "smooth",
   "editor.formatOnSave": true,
@@ -16,10 +15,37 @@
     "suppressGitVersionWarning": false,
     "suppressLineUncommittedWarning": false,
     "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true,
     "suppressUpdateNotice": false,
     "suppressWelcomeNotice": true
   },
   "java.errors.incompleteClasspath.severity": "ignore",
   "workbench.startupEditor": "newUntitledFile",
-  "prettier.eslintIntegration": true
+  "prettier.eslintIntegration": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "window.zoomLevel": 0,
+  "gitlens.keymap": "alternate",
+  "workbench.colorCustomizations": {
+    "editorIndentGuide.activeBackground": "#178888"
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.sideBar.location": "left",
+  "emmet.extensionsPath": "./snippets",
+  "breadcrumbs.enabled": true,
+  "editor.minimap.enabled": true,
+  "todohighlight.isEnable": true,
+  "github.hosts": [
+    {
+      "host": "https://github.com",
+      "username": "oauth",
+      "token": "system"
+    }
+  ],
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "workbench.activityBar.visible": false,
+  "gitlens.mode.active": "zen",
+  "javascript.validate.enable": false
 }
