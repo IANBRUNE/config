@@ -7,8 +7,10 @@ export PATH=~/.local/bin:$PATH
 export idea=/usr/local/bin/idea
 export ZSH=/Users/ianbrune/.oh-my-zsh
 export REACT_EDITOR=code
+export FIREFOX_HOME=/Applications/Firefox.app/Contents/MacOS/firefox
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
+eval $(thefuck --alias)
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -107,6 +109,8 @@ alias ohmyzsh="code ~/.oh-my-zsh"
 alias ll="ls -l"
 
 alias delete-merged='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+
+alias firefox-debug='$FIREFOX_HOME  --start-debugger-server'
 
 alias diff='git diff | gitx'
 alias mm='merge-from-master'
