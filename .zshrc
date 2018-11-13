@@ -63,32 +63,24 @@ plugins=(git aws git-extras)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+####################
+#     WORKSPACE    #
+####################
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+alias ll="ls -l"
+alias work='cd ~/Workspace'
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+alias zshconfig="code ~/.zshrc"
+alias sourcez='source ~/.zshrc'
+alias ohmyzsh="code ~/.oh-my-zsh"
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+alias firefox-debug='$FIREFOX_HOME  --start-debugger-server'
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
+####################
+#        GIT       #
+####################
 
 push-new-branch() {
     git checkout -b $1
@@ -104,23 +96,22 @@ merge-from-master() {
     git merge origin/master
 }
 
+alias diff='git diff | gitx'
+alias mm='merge-from-master'
+
+alias pn='push-new-branch'
+
+alias delete-merged='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+
+
+####################
+#        KCL       #
+####################
+
 start-krazydevs() {
     cd ~/workspace/www.krazydevs.com
     yarn
     yarn start
 }
 
-alias zshconfig="code ~/.zshrc"
-alias ohmyzsh="code ~/.oh-my-zsh"
-alias ll="ls -l"
-
-alias delete-merged='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
-
-alias firefox-debug='$FIREFOX_HOME  --start-debugger-server'
-
-alias diff='git diff | gitx'
-alias mm='merge-from-master'
-alias work='cd ~/Workspace'
-alias pn='push-new-branch'
-alias sourcez='source ~/.zshrc'
 alias krazydevs="start-krazydevs"
