@@ -104,6 +104,12 @@ merge-from-master() {
     git merge origin/master
 }
 
+start-krazydevs() {
+    cd ~/workspace/www.krazydevs.com
+    yarn
+    yarn start
+}
+
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
 alias ll="ls -l"
@@ -117,3 +123,4 @@ alias mm='merge-from-master'
 alias work='cd ~/Workspace'
 alias pn='push-new-branch'
 alias sourcez='source ~/.zshrc'
+alias krazydevs="start-krazydevs"
